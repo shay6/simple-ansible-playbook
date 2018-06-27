@@ -1,0 +1,11 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+    - name: test creating file
+      file:
+        path: /tmp/test
+        state: touch
+
+    - name: edit current date to test file
+      shell: echo $(date) >> /tmp/test
