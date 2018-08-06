@@ -1,2 +1,2 @@
-shay-sonar-ui
-shay-sonar-db
+db ansible_host=10.8.245.242 ansible_ssh_user=root
+ui ansible_host=10.8.242.105 ansible_ssh_user=root
