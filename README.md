@@ -153,7 +153,7 @@ Notes:
  - Select "TEMPLATES" Tab
 
     - On "Deploy Sonar Test" click on the first icon that looks like a rocket. 
-	![Alt text](images/Survey.png?raw=true "Title")
+	![Alt text](../images/Survey.png?raw=true "Title")
     - Choose "Root & Password" for CREDENTIAL then Enter your root password and click NEXT (to use SSH-KEY see the instructions below).
     - Enter your RHN User and Password in the SURVEY.
     - Enter your DB and UI addresses Respectively in the SURVEY and click LAUNCH. That's it!!
