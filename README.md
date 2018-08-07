@@ -146,31 +146,37 @@ Notes:
  - To configure backup, open a ticket for DevOps to setup BareOS on the
    database host.
 
-# For Ansible-Tower deployment
+# Ansible-Tower deployment - Test environment
 
- - Log to Central CI Ansible Tower server at "https://tower-lb-01.host.prod.eng.rdu2.redhat.com/#/login#followAnchor"
- - Note: you need that your DB and UI servers will have the same root password.
+ - Log to [Central CI Ansible Tower server][6]
  - Select "TEMPLATES" Tab
-![testing workflow](images/Template.png)
+![testing workflow](/images/Template.png)
 
-    - On "Deploy Sonar Test" click on the first icon that looks like a rocket. 
-![testing workflow](images/Rocket.png)
-    - Choose "Root & Password" for CREDENTIAL then Enter your root password and click NEXT (to use SSH-KEY see the instructions below).
-![testing workflow](images/Root_Pass.png)
-    - Enter your RHN User and Password in the SURVEY.
-    - Enter your DB and UI addresses Respectively in the SURVEY and click LAUNCH. That's it!!
-![testing workflow](images/Survey.png)
+    - Start a job using "Deploy Sonar Test" template 
+and click on the first icon.
+![testing workflow](/images/Rocket.png)
+    - Choose "Root & Password" for CREDENTIAL then Enter your root password and
+ click NEXT (to use SSH-KEY see the instructions below).
+> Note: you need that your DB and UI servers will have the same root password.
+![testing workflow](/images/Root_Pass.png)
+    - In the SURVEY Enter your RHN User and Password.
+    - Enter your DB and UI addresses Respectively in the SURVEY and click
+ LAUNCH. That's it!!
+![testing workflow](/images/Survey.png)
 
- - If you want to use CREDENTIAL with SSH-KEY you need to copy the Ansible Tower public key to your DB and UI servers and put it in /root/.ssh/authorized_keys file.
+ - If you want to choose CREDENTIAL using SSH-KEY you need to copy the
+ Ansible Tower public key to your DB and UI servers
+ and put it in /root/.ssh/authorized_keys file.
  - The Public Key is:
  ```
  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC77WAIgJVpRdJTqNEhGwWCSq6YCTTPiKqzRZ0L5prJIBBqTMWBMVKTI12WW9LxJYvebibTyHF9K671Slje3hAevXFWvuYpkv4y+wX9ZbU3G1PstJP42sD0Tp6oZR8ReVE2k2pLenux6NbYHPJ98kiuWnYREnTjENVQQ33anfOFNsxCsQ08x/xnfpliQY1Bq4KAbU5NmhIXPeRdkSccis04Le4OCPTjMe7cE1SzPkeADhCxWz9kytK25flJbxJ/prQ0AXXMpleXtHIGL1v2rxnGkw5dmRbkW4YzzHYmfIws/fDdGe7lGvXN6A5OoCo3UdqgzO4+KVCoJnX1aT21n6Cz root@tower-lb-01.host.prod.eng.rdu2.redhat.com
  ```
- - Just choose Sonar-SSH-KEY instead of Root & Password
-![testing workflow](images/Sonar-Ssh-key.png)
+ - Just choose "Sonar-SSH-KEY" instead of "Root & Password"
+![testing workflow](/images/Sonar-Ssh-key.png)
 
 [1]: https://satellite6.corp.redhat.com/hosts/cci-prod-sonar-db.rhev-ci-vms.eng.rdu2.redhat.com
 [2]: https://satellite6.corp.redhat.com/hosts/cci-prod-sonar-ui.rhev-ci-vms.eng.rdu2.redhat.com
 [3]: https://www.cyberciti.biz/faq/how-to-install-and-use-nginx-on-centos-7-rhel-7/
 [4]: https://github.com/abraverm/ansible-sonar-deployment
 [5]: https://github.com/abraverm/ansible-role-sonar/tree/postgresql
+[6]: https://tower-lb-01.host.prod.eng.rdu2.redhat.com/#/login#followAnchor
