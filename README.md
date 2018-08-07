@@ -157,7 +157,8 @@ Notes:
        ![testing workflow](/images/Rocket.png)
     - Choose "Root & Password" for CREDENTIAL then Enter your
        root password and click NEXT (to use SSH-KEY see the instructions below).
-       > Note: you need that your DB and UI servers will have the same root password.
+       > Note: you need that your DB and UI servers will 
+          have the same root password.
 
        ![testing workflow](/images/Root_Pass.png)
 
